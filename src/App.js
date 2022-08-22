@@ -1,6 +1,6 @@
 import React from 'react'
-// import "./styles.css";
-import Data from './Components/Data'
+// import "../styles.css";
+import { Data } from './Components/Data'
 export default function App() {
   const [number,setNumber] = React.useState("")
   const [error,setError] = React.useState(false)
@@ -16,12 +16,13 @@ export default function App() {
   console.log(number)
   return (
     <div className="App">
-    <input type = "number"
+      <Data />
+    {/* <input type = "number"
     value = {number}
     onChange = {handleChange}/>
-    {error  ? "change the number" : null}
+    {error  ? "change the number" : null} */}
 
-    <Data />
+   
     </div>
   );
 }
