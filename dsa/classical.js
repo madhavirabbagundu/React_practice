@@ -3,7 +3,7 @@ function classical(str){
     for(var i = 1; i < str.length; i++){
         if(str[i]==="[" || stk[i]==="{" || str[i]==="("){
             stk.push(str[i])
-
+console.log(stk)
         }
         else{
             if(str[i]==="]" && stk[stk.length-1]==="["){
@@ -17,7 +17,7 @@ function classical(str){
             }
         }
     }
-console.log(stk.length)
+console.log(stk)
 if(stk.length===0){
     return "empty"
 }
