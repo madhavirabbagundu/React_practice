@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+    <input type = "text" placeholder="Enter the name"  id = "name"/>
+    <input type = "number" placeholder="Enter the number"  id = "number"/>
+    <button type = "submit" onClick = "submit()">Submit</button>
+    </div>
+</body>
+</html>
+<script>
+   function submit(){
+        var name = document.getElementById("name").value;
+        var nuumber = document.getElementById("number").value;
+        console.log(name, nuumber)
+
+    }
+</script>
