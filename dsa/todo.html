@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        border:1px solid black;
+    }
+    tr,th,td{
+        border:1px solid black;
+
+    }
+</style>
+<body>
+    <h1>Todo forms</h1>
+    <table id = "container">
+        <tbody>
+            <tr>
+            <th>Id</th>
+            <th>title</th>
+            <th>Status</th>
+            </tr>
+            
+        </tbody>
+
+    </table>
+</body>
+</html>
+<script>
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then((res)=>res.json())
+    .then((res)=>product(res))
+
+    function product(data){
+     console.log(data)
+     data.forEach(element => {
+        
+        var div = document.createElement("tr")
+        var id = document.createElement("td")
+        id.innerText = element.id
+
+        var title = document.createElement("td")
+        title.innerText = element.title
+
+        var status = document.createElement("td")
+        status.innerText = element.completed
+
+        div.append(id,title,status)
+        container.append(div)
+     });
+    }
+</script>
